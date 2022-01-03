@@ -1,0 +1,48 @@
+library IEEE;
+use IEEE.STD_LOGIC_1164.ALL;
+
+entity LCD is
+    Port ( clk : in STD_LOGIC;
+           db : out STD_LOGIC_VECTOR (7 downto 0);
+           enable : out STD_LOGIC;
+           rw : out STD_LOGIC;
+           rs : out STD_LOGIC);
+end LCD;
+
+architecture Behavioral of LCD is
+type state is (s0,s1,s2,s3,s4,s5,s6,s7,s8,s9,s10,s11,s12)  ; 
+type name is array (0 to 9) of std_logic_vector(7 downto 0) ;
+
+signal current_state , next_state : state := s0;
+signal clk_out : std_logic ;  
+signal BCD0,BCD1,BCD2: std_logic_vector(3 downto 0);
+
+end component ; 
+
+begin
+
+
+process
+process(clk)
+variable counter : integer range 0 to 10000000;
+begin 
+if (clk'event and clk='1') then
+counter:=counter+1;
+current_state <= next_state ;
+case current_state is
+
+when s0=>
+if(counter=2000000)then
+counter:=0;
+next_state <= s1;
+end if;
+e<='0';
+rs<='0';
+rw<='0';
+
+when s1=>
+
+
+end case;
+end if;
+end process;
