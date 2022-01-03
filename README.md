@@ -5,6 +5,13 @@ The structure includes a JavaFX development with a Database management system, w
 Ps: a word doc is uploaded including screenshots of all the interfaces, UML design and the requirement. 
 
 
+## LogIn 
+
+
 ![image](https://user-images.githubusercontent.com/58387454/147962305-2fa408eb-af7d-4832-b0b3-3a1accbfee8b.png)
 
 
+## Home
+
+
+![image](https://user-images.githubusercontent.com/58387454/147963603-781837b2-d68f-43df-aced-b8231e2c16e0.png)
